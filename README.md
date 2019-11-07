@@ -142,7 +142,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 13. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-14. **`postcss.config.js`**: This configuration file allows us to customize our [PostCSS](https://postcss.org/) settings. PostCSS is used to compile the custom css we write outside of Emotion.
+14. **`postcss.config.js`**: This configuration file allows us to customize our [PostCSS](https://postcss.org/) settings. PostCSS is used to compile the custom css we write outside of `styled-components`.
 
 15. **`README.md`**: A text file containing useful reference information about your project.
 
