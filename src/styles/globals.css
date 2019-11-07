@@ -1,0 +1,9 @@
+/*
+  Inject Tailwind's base styles and use the Tailwind Macro with emotion to use
+  the rest of Tailwind's classes in the project
+*/
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
