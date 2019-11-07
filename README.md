@@ -18,7 +18,8 @@
 
 - Use [Tailwind CSS v1](https://tailwindcss.com/) in [Styled-Components](https://www.styled-components.com/).
 - Decouple developing with [Storybook](https://storybook.js.org/).
-- Use the flexibility of [PostCSS](https://postcss.org/) to extend Tailwind's CSS or write your own CSS. [Postcss-Preset-Env](https://preset-env.cssdb.org/) is enabled out-of-the box allowing you to write tomorrow's CSS today!
+- Use [PostCSS](https://postcss.org/) to extend Tailwind's CSS.
+- Enabling [Postcss-Preset-Env](https://preset-env.cssdb.org/) out-of-the box.
 
 ```jsx
 // More Tailwind examples https://tailwindcss.com/components/
@@ -78,8 +79,9 @@ export const Default = () => <IndexPage />;
    yarn storybook
    ```
 
-   > You must run develop once before storybook
-   > Storybook needs having access to `public` folder.
+   > You must run develop once before storybook.
+   >
+   > Storybook must have access to `public` folder.
 
 ## 📕 Deploying Storybook to Netlify
 
