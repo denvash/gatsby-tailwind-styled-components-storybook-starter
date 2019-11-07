@@ -32,7 +32,7 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear" x1="114.5" y1="74" x2="111" y2="302" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F7E7FF"/>
+<stop stop-color="#FEFDFF"/>
 <stop offset="1" stop-color="#F7E7FF" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint1_linear" x1="126" y1="30.667" x2="190" y2="137.333" gradientUnits="userSpaceOnUse">
