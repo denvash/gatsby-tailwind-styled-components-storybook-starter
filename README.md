@@ -73,13 +73,13 @@ export const Default = () => <IndexPage />;
 
 2. Start Develop
 
-```sh
-yarn develop
-yarn storybook
-```
+   ```sh
+   yarn develop
+   yarn storybook
+   ```
 
-> You must run develop once before storybook
-> Storybook needs having access to `public` folder.
+   > You must run develop once before storybook
+   > Storybook needs having access to `public` folder.
 
 ## 📕 Deploying Storybook to Netlify
 
