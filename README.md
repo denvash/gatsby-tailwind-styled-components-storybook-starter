@@ -1,27 +1,30 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ece07044-6cc6-459e-808b-92485f0ba479/deploy-status)](https://app.netlify.com/sites/gatsby-tailwind-emotion-starter-demo/deploys)
-
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="./src/images/gatsby.svg" width="60" />
-  </a>
-  <a href="https://tailwindcss.com">
-    <img alt="Gatsby" src="./src/images/tailwind.svg" width="60" />
-  </a>
-  <a href="https://emotion.sh">
-    <img alt="Gatsby" src="./src/images/emotion.png" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Tailwind + Emotion Gatsby Starter
+<img src=".github/Banner.svg">
 </h1>
 
-Kick off your project with this bare-bones Tailwind CSS + Emotion starter for Gatsby. This starter ships with the packages and configuration files you need to get hit the ground running on your next Tailwind CSS project.
+## Motivation
 
-## 📝 Notes
+- Use [Tailwind CSS](https://tailwindcss.com/) in [Styled-Components](https://www.styled-components.com/).
+- Decouple developing with [Storybook](https://storybook.js.org/).
 
-Andrew Welch wrote a terrific article about this setup over on his blog, ["Using Tailwind CSS with Gatsby, React & Emotion Styled Components"](https://nystudio107.com/blog/using-tailwind-css-with-gatsby-react-emotion-styled-components). The only difference between this starter and Andrew's writeup is I have not included [stylelint](https://stylelint.io) as of this release.
+```javascript
+// Styling examples https://tailwindcss.com/components/buttons
+const Button = tw.button`
+bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded
+`;
 
-If you prefer to use a [Gatsby Theme](https://www.gatsbyjs.org/docs/themes/what-are-gatsby-themes/) instead of a [Gatsby Starter](https://www.gatsbyjs.org/docs/starters/), Jordi Talens has an [excellent theme](https://github.com/talensjr/gatsby-theme-tailwindcss) that you can layer on with other Gatsby themes.
+const OutlineButton = styled.button`
+bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded
+`;
+```
+
+## Quick Start
+
+```json
+"scripts": {
+  "storybook": "NODE_ENV=production start-storybook -p 6006"
+}
+```
 
 ## 💄 Demo
 
@@ -68,85 +71,84 @@ To use Tailwind CSS classes inside of your components you use the `tailwind.macr
 ### Standalone Tailwind Classes
 
 ```js
-import tw from "tailwind.macro"
-import React from "react"
+import tw from 'tailwind.macro';
+import React from 'react';
 
 const Heading = tw.h1`
   text-2xl text-gray-500 uppercase
-`
+`;
 
 export default () => (
   <div>
     <Heading>Hello, world!</Heading>
   </div>
-)
+);
 ```
 
 ### Styled Components with Emotion
 
 ```js
-import styled from "@emotion/styled"
-import tw from "tailwind.macro"
-import React from "react"
+import styled from '@emotion/styled';
+import tw from 'tailwind.macro';
+import React from 'react';
 
-import pattern from "../images/pattern.png"
+import pattern from '../images/pattern.png';
 
 const Container = styled.div`
     ${tw`bg-gray-100 w-full`}
     background-image: url(${background});
     padding: 15px;
-`
+`;
 
 export default () => (
   <Container>
     <h1>Hello, world!</h1>
   </Container>
-)
+);
 ```
 
 ### Combined Standalone + Styled Components Example
 
 ```js
-import styled from "@emotion/styled"
-import tw from "tailwind.macro"
-import React from "react"
+import styled from '@emotion/styled';
+import tw from 'tailwind.macro';
+import React from 'react';
 
-import pattern from "../images/pattern.png"
+import pattern from '../images/pattern.png';
 
 const Container = styled.div`
     ${tw`bg-gray-100 w-full`}
     background-image: url(${background});
     padding: 15px;
-`
+`;
 
 const Heading = tw.h1`
   text-2xl text-gray-500 uppercase
-`
+`;
 
 export default () => (
   <Container>
     <Heading>Hello, world!</Heading>
   </Container>
-)
+);
 ```
 
 ### CSS Prop to inline Tailwind Classes
 
 ```js
-import tw from "tailwind.macro"
-import { css } from "@emotion/core"
-import React from "react"
+import tw from 'tailwind.macro';
+import { css } from '@emotion/core';
+import React from 'react';
 
 export default () => (
   <div
     css={css`
       ${tw`flex items-center justify-between px-4 py-3`}
-    `}
-  >
+    `}>
     <h1>Hello, world!</h1>
     <h2>I'm a flex item too!</h2>
   </div>
-)
+);
 ```
 
 ## 🧐 What's inside?
