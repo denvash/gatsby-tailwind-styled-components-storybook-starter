@@ -1,17 +1,38 @@
 {
-  "name": "gatsby-styled-tailwind-storybook-starter",
-  "description": "A bare-bones Tailwind CSS + Emotion starter for Gatsby",
+  "name": "gatsby-tailwind-styled-components-storybook-starter",
+  "description": "A bare-bones Tailwind CSS + Styled-Components + Storybook starter for Gatsby",
   "version": "1.0.0",
+  "author": "Dennis Vash <dennisvash@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "template",
+    "tailwind",
+    "storybook",
+    "styled-components",
+    "css-in-js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denvash/gatsby-styled-tailwind-storybook-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/denvash/gatsby-styled-tailwind-storybook-starter/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "yarn develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
     "storybook": "NODE_ENV=production start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "yarn build; NODE_PATH=src/ NODE_ENV=production build-storybook -s public --quiet"
   },
   "dependencies": {
     "gatsby": "^2.17.0",
@@ -41,17 +62,5 @@
     "pretty-quick": "^2.0.1",
     "tailwind.macro": "^1.0.0-alpha.10",
     "tailwindcss": "^1.1.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/denvash/gatsby-styled-tailwind-storybook-starter"
-  },
-  "bugs": {
-    "url": "https://github.com/denvash/gatsby-styled-tailwind-storybook-starter/issues"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
   }
 }

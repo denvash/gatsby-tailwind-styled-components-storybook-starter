@@ -2,33 +2,49 @@
 <img src=".github/Banner.svg">
 </h1>
 
+## 💄 Demo
+
+- Application
+- Storybook
+
 ## Motivation
 
-- Use [Tailwind CSS](https://tailwindcss.com/) in [Styled-Components](https://www.styled-components.com/).
+- Use [Tailwind CSS v1](https://tailwindcss.com/) in [Styled-Components](https://www.styled-components.com/).
 - Decouple developing with [Storybook](https://storybook.js.org/).
 
 ```javascript
-// Styling examples https://tailwindcss.com/components/buttons
-const Button = tw.button`
-bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded
+// More Tailwind examples https://tailwindcss.com/components/
+
+import tw from 'tailwind.macro';
+
+// Standalone Tailwind Classes
+const Main = tw.div`
+  p-6 bg-gray-100 rounded-lg shadow-2xl
 `;
 
-const OutlineButton = styled.button`
-bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded
+// Keep the power of styled-components
+const Wrapper = styled.div`
+  ${tw`flex items-center justify-center flex-col h-screen`}
+  color: ${({ isClicked }) => (isClicked ? 'red' : 'blue')}
 `;
+
+// Develop and test with storybook v5
+import React from 'react';
+import IndexPage from './IndexPage.react';
+
+export default {
+  title: 'IndexPage',
+};
+
+export const Default = () => <IndexPage />;
 ```
 
-## Quick Start
+## What this template solves
 
-```json
-"scripts": {
-  "storybook": "NODE_ENV=production start-storybook -p 6006"
-}
-```
-
-## 💄 Demo
-
-You can see a demo of the frontend [over yonder](https://gatsby-tailwind-emotion-starter-demo.netlify.com/).
+- Configure Tailwind to work with CSS-in-JS.
+- Configure Gatsby & Tailwind to work with Storybook.
+- Usage Examples (`IndexPage` component).
+- Deploy ready, either for Storybook.
 
 ## 🚀 Quick start
 
@@ -67,89 +83,6 @@ This starter contains has the following features enabled by default:
 ## 📦 Example components
 
 To use Tailwind CSS classes inside of your components you use the `tailwind.macro` package. You can also create richer styled components using a combination of both Tailwind's classes and your own custom CSS with Emotion.
-
-### Standalone Tailwind Classes
-
-```js
-import tw from 'tailwind.macro';
-import React from 'react';
-
-const Heading = tw.h1`
-  text-2xl text-gray-500 uppercase
-`;
-
-export default () => (
-  <div>
-    <Heading>Hello, world!</Heading>
-  </div>
-);
-```
-
-### Styled Components with Emotion
-
-```js
-import styled from '@emotion/styled';
-import tw from 'tailwind.macro';
-import React from 'react';
-
-import pattern from '../images/pattern.png';
-
-const Container = styled.div`
-    ${tw`bg-gray-100 w-full`}
-    background-image: url(${background});
-    padding: 15px;
-`;
-
-export default () => (
-  <Container>
-    <h1>Hello, world!</h1>
-  </Container>
-);
-```
-
-### Combined Standalone + Styled Components Example
-
-```js
-import styled from '@emotion/styled';
-import tw from 'tailwind.macro';
-import React from 'react';
-
-import pattern from '../images/pattern.png';
-
-const Container = styled.div`
-    ${tw`bg-gray-100 w-full`}
-    background-image: url(${background});
-    padding: 15px;
-`;
-
-const Heading = tw.h1`
-  text-2xl text-gray-500 uppercase
-`;
-
-export default () => (
-  <Container>
-    <Heading>Hello, world!</Heading>
-  </Container>
-);
-```
-
-### CSS Prop to inline Tailwind Classes
-
-```js
-import tw from 'tailwind.macro';
-import { css } from '@emotion/core';
-import React from 'react';
-
-export default () => (
-  <div
-    css={css`
-      ${tw`flex items-center justify-between px-4 py-3`}
-    `}>
-    <h1>Hello, world!</h1>
-    <h2>I'm a flex item too!</h2>
-  </div>
-);
-```
 
 ## 🧐 What's inside?
 
