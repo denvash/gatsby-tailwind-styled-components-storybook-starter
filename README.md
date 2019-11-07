@@ -56,16 +56,27 @@ export const Default = () => <IndexPage />;
 
 ## 🚀 Quick start
 
-1. **Create a Gatsby site.**
+1. Get the repo with Gatsby CLI **or** clone from Github
 
    ```sh
-   # create a new Gatsby site using the gatsby CLI
+   # Create a new Gatsby site using the gatsby CLI
    gatsby new my-tailwind-styled-starter https://github.com/denvash/gatsby-tailwind-styled-components-storybook-starter
-
    cd my-tailwind-styled-starter/
-   yarn develop
-   yarn storybook
    ```
+
+   ```sh
+   # Clone the repo
+   git clone https://github.com/denvash/gatsby-tailwind-styled-components-storybook-starter.git
+   cd gatsby-styled-tailwind-storybook-starter
+   yarn install
+   ```
+
+2. Start Develop
+
+```sh
+yarn develop
+yarn storybook
+```
 
 ## 📕 How to deploy Storybook to Netlify?
 
