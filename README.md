@@ -78,7 +78,10 @@ yarn develop
 yarn storybook
 ```
 
-## 📕 How to deploy Storybook to Netlify?
+> You must run develop once before storybook
+> Storybook needs having access to `public` folder.
+
+## 📕 Deploying Storybook to Netlify
 
 Edit the **Build Command** and the **Publish directory** at **Build & Deploy** section.
 
