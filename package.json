@@ -1,7 +1,7 @@
 {
   "name": "gatsby-tailwind-styled-components-storybook-starter",
   "description": "A bare-bones Tailwind CSS + Styled-Components + Storybook starter for Gatsby",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Dennis Vash <dennisvash@gmail.com>",
   "license": "MIT",
   "keywords": [
