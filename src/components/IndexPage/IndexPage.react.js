@@ -1,12 +1,12 @@
 import React from 'react';
-import SEO from '../seo';
+import SEO from 'components/seo';
 import {
   GatsbyIcon,
   StorybookIcon,
   TailwindIcon,
   GithubIcon,
   StyledComponentsIcon,
-} from '../icons';
+} from 'components/icons';
 import styled from 'styled-components';
 import tw from 'tailwind.macro';
 
