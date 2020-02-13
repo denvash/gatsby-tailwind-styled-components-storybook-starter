@@ -56,6 +56,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
     "babel-preset-gatsby": "^0.2.20",
+    "gatsby-plugin-purgecss": "^4.0.1",
     "gatsby-plugin-styled-components": "^3.1.11",
     "husky": "^3.0.9",
     "postcss-preset-env": "^6.7.0",
